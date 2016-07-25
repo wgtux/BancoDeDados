@@ -22,3 +22,15 @@ primary key (id)
 
 /*descrevendo a tabela*/
 describe membros;
+
+/*Inserindo os dados*/
+insert into	membros 
+(id, Nome, Sexo, DataNasc, LocalNasc, CidadeIgreja, Nacionalidade)
+values 
+(DEFAULT, 'Wesley', 'M', '1988-01-26', 'Vinhedo', 'Vinhedo', 'Brasil'),
+(default,'Godofredo', 'M', '1990-02-04', 'Vinhedo', 'Pacaembu', default),
+(default,'Maria Joana', 'F', '1970-05-23', 'Pacaembu', 'Campinas', 'Portugual'),
+(default, 'Ana Carol', 'F', '1995-07-03', 'Luzitania', 'Santa Gertudes', 'EUA');
+
+/*Selecionando a tabela membros*/
+select	* from membros;
