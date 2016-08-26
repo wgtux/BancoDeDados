@@ -1,3 +1,4 @@
+/*Apagando Banco de Dados*/
 drop database cadastro;
 
 /*criando o banco cadastro*/
@@ -34,3 +35,7 @@ values
 
 /*Selecionando a tabela membros*/
 select	* from membros;
+
+/*Alterando Nome da Coluna*/
+alter table membros
+change column Nacionalidade País varchar (20) default 'Brasil';
