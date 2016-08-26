@@ -39,3 +39,24 @@ select	* from membros;
 /*Alterando Nome da Coluna*/
 alter table membros
 change column Nacionalidade País varchar (20) default 'Brasil';
+
+/* Criando a tabela cargos*/
+create table if not exists cargos (
+id int not null auto_increment,
+nome varchar (15) not null,
+primary key (id)
+) default charset=utf8;
+
+desc cargos;
+/*Inserindo dados na tabela cargo*/
+insert into cargos values
+(default, 'Pastor (a)'),
+(default, 'Evangelista'),
+(default, 'Presbitero'),
+(default, 'Diacono(isa)'),
+(default, 'Cooperador'),
+(default, 'Membro');
+
+select * from cargos;
+
+
