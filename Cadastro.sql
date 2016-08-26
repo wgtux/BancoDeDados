@@ -59,4 +59,38 @@ insert into cargos values
 
 select * from cargos;
 
+/*Tabela Departamento*/
+create table departamento (
+id int not null auto_increment,
+nomeDep varchar (15) not null,
+primary key (id)
+) default charset=utf8;
+
+alter table departamento modify column nomeDep varchar(30) not null;
+/*Inserindo Dados*/
+insert into departamento values
+(default, 'Circulo de Oracao/Mulheres'),
+(default, 'Mocidade'),
+(default, 'Criancas'),
+(default, 'Varoes'),
+(default, 'Somente Membro');
+
+select * from departamento;
+
+/*Tabela Igreja*/
+create table igreja (
+id int not null auto_increment,
+Endereco varchar (25),
+num int,
+bairro varchar (15),
+cep varchar (10), 
+cidade varchar (15) not null,
+estado varchar (15) not null,
+primary key (id)
+) default charset=utf8;
+
+insert into igreja values 
+(default, 'Rua Egidio Altieri', '55', 'Capela', '13.280-000','Vinhedo', 'SP');
+
+select * from igreja;
 
