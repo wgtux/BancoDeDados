@@ -81,16 +81,42 @@ select * from departamento;
 create table igreja (
 id int not null auto_increment,
 Endereco varchar (25),
-num int,
+numero int,
 bairro varchar (15),
 cep varchar (10), 
-cidade varchar (15) not null,
-estado varchar (15) not null,
 primary key (id)
 ) default charset=utf8;
 
+alter table igreja add column nomeIgreja varchar(30) not null after id;
+alter table igreja modify column Endereco varchar(40);
+alter table igreja modify column bairro varchar(40);
+
+desc igreja;
+
 insert into igreja values 
-(default, 'Rua Egidio Altieri', '55', 'Capela', '13.280-000','Vinhedo', 'SP');
+(default, 'Novo Tempo Vinhedo', 'Rua Egidio Altieri', '55', 'Capela', '13.280-000'),
+(default, 'Novo Tempo Campinas', 'Rua São Paulo', '150', 'Campo Belo', '13.123-000'),
+(default, 'Novo Tempo Santa Gertrudes', 'Rua 25 de marco', '100', 'Bela Vista', '13.123-100'),
+(default, 'Novo Tempo Santa Lucia', 'Rua nove de julho', '80', 'Centro', '13.280-231'),
+(default, 'Novo Tempo Pacaembu', 'Av. Paulista', '76', 'Capela', '13.760-000');
+
 
 select * from igreja;
 
+/*Cadastro de cidades*/
+create table cidade (
+id int auto_increment not null,
+cidade varchar (30) not null,
+estado varchar (2) not null,
+pais varchar (20),
+primary key (id)
+) default charset=utf8;
+
+insert into cidade values
+(default,'Vinhedo', 'SP', 'Brasil'),
+(default,'Campinas', 'SP', 'Brasil'),
+(default,'Santa Gertrudes', 'SP', 'Brasil'),
+(default,'Santa Lucia', 'SP', 'Brasil'),
+(default,'Pacaembu', 'SP', 'Brasil');
+
+select * from cidade;
