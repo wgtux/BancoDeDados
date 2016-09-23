@@ -75,5 +75,19 @@ insert into departamento values
 (default, 'Varoes'),
 (default, 'Somente Membro');
 
+insert into cargo values
+(default, 'Pastor(a)'),
+(default, 'Evangelista'),
+(default, 'Presbitero'),
+(default, 'Diacono(isa)'),
+(default, 'Cooperador(a)'),
+(default, 'Membro');
 
+insert into departamento values (default, 'Obreiro(a)');
+
+select * from cargo;
 select * from departamento;
+select * from igreja;
+select * from membros;
+
+show tables;
